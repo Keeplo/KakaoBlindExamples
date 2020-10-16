@@ -90,7 +90,6 @@ func solution(_ dartResult:String) -> Int {
             }
         }
     }
-    print(result)
     
     return result.reduce(0, +)
 }
