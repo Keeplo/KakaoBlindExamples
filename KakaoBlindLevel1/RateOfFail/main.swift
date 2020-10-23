@@ -15,31 +15,29 @@
 import Foundation
 
 func solution(_ N:Int, _ stages:[Int]) -> [Int] {
-    var result: Dictionary<Int, Double> = [:]
+    var rates = [Double]()
+    
     for i in 1...N {
         let triedStageCount = Double(stages.filter({ i<=$0 }).count)
-        let failedStageCount = Double(stages.filter({ i>=$0 }).count)
+        let failedStageCount = Double(stages.filter({ i==$0 }).count)
         
         var rate = failedStageCount/triedStageCount
         if rate > 1 {
             rate = 1
         }
         
-        result.updateValue( rate, forKey: i)
-        print("Stage \(i) / Rate : \(rate)")
+        rates.append(rate)
     }
     
-    
-    
-    return result.sorted(by: > ).map({$0.key})
+    var result = [Int]()
+    for _ in 1...N {
+        result.append(rates.firstIndex(of: rates.max()!)! + 1)
+        rates[rates.firstIndex(of: rates.max()!)!] = -1
+    }
+    return result
 }
 
 let n = 5
 let stages = [2, 1, 2, 6, 2, 4, 3, 3]
 
-//print(solution(n, stages))
-
-
-let a = [3,2,1,1,1]
-
-print(a.sorted(by: <))
+print(solution(n, stages))
