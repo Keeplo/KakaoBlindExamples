@@ -7,11 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A902CB69253D727F00B84126 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A902CB68253D727F00B84126 /* main.swift */; };
+		A97D83502539854D008B0FD4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97D834F2539854D008B0FD4 /* main.swift */; };
 		A9BD8DD925382D95002523C1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BD8DD825382D95002523C1 /* main.swift */; };
+		A9BD8DE9253832E3002523C1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BD8DE8253832E3002523C1 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A902CB64253D727F00B84126 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A97D834B2539854D008B0FD4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		A9BD8DD325382D95002523C1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A9BD8DE4253832E3002523C1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +53,39 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A902CB66253D727F00B84126 /* RateOfFail */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RateOfFail; sourceTree = BUILT_PRODUCTS_DIR; };
+		A902CB68253D727F00B84126 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A97D834D2539854D008B0FD4 /* SecretMap */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SecretMap; sourceTree = BUILT_PRODUCTS_DIR; };
+		A97D834F2539854D008B0FD4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A9BD8DD525382D95002523C1 /* KakaoBlindLevel1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KakaoBlindLevel1; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BD8DD825382D95002523C1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A9BD8DE6253832E3002523C1 /* DartGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DartGame; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9BD8DE8253832E3002523C1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A902CB63253D727F00B84126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A97D834A2539854D008B0FD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9BD8DD225382D95002523C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9BD8DE3253832E3002523C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,10 +95,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A902CB67253D727F00B84126 /* RateOfFail */ = {
+			isa = PBXGroup;
+			children = (
+				A902CB68253D727F00B84126 /* main.swift */,
+			);
+			path = RateOfFail;
+			sourceTree = "<group>";
+		};
+		A97D834E2539854D008B0FD4 /* SecretMap */ = {
+			isa = PBXGroup;
+			children = (
+				A97D834F2539854D008B0FD4 /* main.swift */,
+			);
+			path = SecretMap;
+			sourceTree = "<group>";
+		};
 		A9BD8DCC25382D95002523C1 = {
 			isa = PBXGroup;
 			children = (
 				A9BD8DD725382D95002523C1 /* KakaoBlindLevel1 */,
+				A9BD8DE7253832E3002523C1 /* DartGame */,
+				A97D834E2539854D008B0FD4 /* SecretMap */,
+				A902CB67253D727F00B84126 /* RateOfFail */,
 				A9BD8DD625382D95002523C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				A9BD8DD525382D95002523C1 /* KakaoBlindLevel1 */,
+				A9BD8DE6253832E3002523C1 /* DartGame */,
+				A97D834D2539854D008B0FD4 /* SecretMap */,
+				A902CB66253D727F00B84126 /* RateOfFail */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,9 +141,51 @@
 			path = KakaoBlindLevel1;
 			sourceTree = "<group>";
 		};
+		A9BD8DE7253832E3002523C1 /* DartGame */ = {
+			isa = PBXGroup;
+			children = (
+				A9BD8DE8253832E3002523C1 /* main.swift */,
+			);
+			path = DartGame;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A902CB65253D727F00B84126 /* RateOfFail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A902CB6C253D727F00B84126 /* Build configuration list for PBXNativeTarget "RateOfFail" */;
+			buildPhases = (
+				A902CB62253D727F00B84126 /* Sources */,
+				A902CB63253D727F00B84126 /* Frameworks */,
+				A902CB64253D727F00B84126 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RateOfFail;
+			productName = RateOfFail;
+			productReference = A902CB66253D727F00B84126 /* RateOfFail */;
+			productType = "com.apple.product-type.tool";
+		};
+		A97D834C2539854D008B0FD4 /* SecretMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A97D83532539854D008B0FD4 /* Build configuration list for PBXNativeTarget "SecretMap" */;
+			buildPhases = (
+				A97D83492539854D008B0FD4 /* Sources */,
+				A97D834A2539854D008B0FD4 /* Frameworks */,
+				A97D834B2539854D008B0FD4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecretMap;
+			productName = SecretMap;
+			productReference = A97D834D2539854D008B0FD4 /* SecretMap */;
+			productType = "com.apple.product-type.tool";
+		};
 		A9BD8DD425382D95002523C1 /* KakaoBlindLevel1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9BD8DDC25382D95002523C1 /* Build configuration list for PBXNativeTarget "KakaoBlindLevel1" */;
@@ -82,6 +203,23 @@
 			productReference = A9BD8DD525382D95002523C1 /* KakaoBlindLevel1 */;
 			productType = "com.apple.product-type.tool";
 		};
+		A9BD8DE5253832E3002523C1 /* DartGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9BD8DEC253832E3002523C1 /* Build configuration list for PBXNativeTarget "DartGame" */;
+			buildPhases = (
+				A9BD8DE2253832E3002523C1 /* Sources */,
+				A9BD8DE3253832E3002523C1 /* Frameworks */,
+				A9BD8DE4253832E3002523C1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DartGame;
+			productName = DartGame;
+			productReference = A9BD8DE6253832E3002523C1 /* DartGame */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -89,9 +227,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1210;
 				TargetAttributes = {
+					A902CB65253D727F00B84126 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					A97D834C2539854D008B0FD4 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
 					A9BD8DD425382D95002523C1 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					A9BD8DE5253832E3002523C1 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
 				};
@@ -110,11 +257,30 @@
 			projectRoot = "";
 			targets = (
 				A9BD8DD425382D95002523C1 /* KakaoBlindLevel1 */,
+				A9BD8DE5253832E3002523C1 /* DartGame */,
+				A97D834C2539854D008B0FD4 /* SecretMap */,
+				A902CB65253D727F00B84126 /* RateOfFail */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A902CB62253D727F00B84126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A902CB69253D727F00B84126 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A97D83492539854D008B0FD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A97D83502539854D008B0FD4 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9BD8DD125382D95002523C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,9 +289,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9BD8DE2253832E3002523C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9BD8DE9253832E3002523C1 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		A902CB6A253D727F00B84126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A902CB6B253D727F00B84126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A97D83512539854D008B0FD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A97D83522539854D008B0FD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		A9BD8DDA25382D95002523C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -244,6 +466,7 @@
 		A9BD8DDD25382D95002523C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9486RJPBM5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -255,6 +478,31 @@
 		A9BD8DDE25382D95002523C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A9BD8DEA253832E3002523C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9486RJPBM5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A9BD8DEB253832E3002523C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9486RJPBM5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -266,6 +514,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A902CB6C253D727F00B84126 /* Build configuration list for PBXNativeTarget "RateOfFail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A902CB6A253D727F00B84126 /* Debug */,
+				A902CB6B253D727F00B84126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A97D83532539854D008B0FD4 /* Build configuration list for PBXNativeTarget "SecretMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A97D83512539854D008B0FD4 /* Debug */,
+				A97D83522539854D008B0FD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A9BD8DD025382D95002523C1 /* Build configuration list for PBXProject "KakaoBlindLevel1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -280,6 +546,15 @@
 			buildConfigurations = (
 				A9BD8DDD25382D95002523C1 /* Debug */,
 				A9BD8DDE25382D95002523C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9BD8DEC253832E3002523C1 /* Build configuration list for PBXNativeTarget "DartGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9BD8DEA253832E3002523C1 /* Debug */,
+				A9BD8DEB253832E3002523C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
