@@ -64,17 +64,17 @@ let arr2 = [30, 1, 21, 17, 28]
 print(solution(n, arr1, arr2))
 
 
-let a = 21
-let b = 13
-
-let aa = Int8(a)
-let bb = String(b, radix: 2)
-
-
-print(aa)
-print(bb)
-
-
-let aaa = UInt8(bigEndian: UInt8(aa))
-
-print(aaa)
+//let a = 21
+//let b = 13
+//
+//let aa = Int8(a)
+//let bb = String(b, radix: 2)
+//
+//
+//print(aa)
+//print(bb)
+//
+//
+//let aaa = UInt8(bigEndian: UInt8(aa))
+//
+//print(aaa)
