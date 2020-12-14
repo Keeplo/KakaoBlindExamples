@@ -13,7 +13,7 @@
 
 import Foundation
 
-func solution(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
+//func solution(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
 //    var answer: [String] = []
     
 //    let arrA = arr1.map({ (i: Int) -> String in
@@ -38,15 +38,16 @@ func solution(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
 //        }
 //        answer.append(midAnswer.reduce("", +))
 //    }
+
+func solution(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
     let answer = (0..<n).map{ (i: Int) -> String in
-        var data = String(UInt16(arr1[i]) | UInt16(arr2[i]))
+        var data = String(UInt16(arr1[i]) | UInt16(arr2[i]), radix: 2)
         while(n-data.count > 0) {
             data = "0" + data // 맨앞에 0이 생략된 경우
         }
         
         return data
     }
-    print(answer)
     
     let result = answer.map({ $0.reduce("") { $1 == "1" ? $0 + "#" : $0 + " " } })
     
