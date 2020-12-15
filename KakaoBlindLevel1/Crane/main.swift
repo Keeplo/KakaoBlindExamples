@@ -20,4 +20,6 @@ func solution(_ board:[[Int]], _ moves:[Int]) -> Int {
 }
 
 
-// 크레인 좋아요
+
+// 크레인 좋아요 / 싫어요
+
