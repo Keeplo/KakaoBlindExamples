@@ -45,7 +45,6 @@ func solution(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
         while(n-data.count > 0) {
             data = "0" + data // 맨앞에 0이 생략된 경우
         }
-        
         return data
     }
     
