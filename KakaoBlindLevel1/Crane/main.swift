@@ -18,3 +18,6 @@ import Foundation
 func solution(_ board:[[Int]], _ moves:[Int]) -> Int {
     return 0
 }
+
+
+// 크레인 싫어요
