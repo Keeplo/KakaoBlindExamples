@@ -23,7 +23,7 @@ func solution(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
     
     return result
 }
-
+// 실험
 // Test 1
 let n = 5
 let arr1 = [9, 20, 28, 18, 11]
