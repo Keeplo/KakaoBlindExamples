@@ -8,16 +8,17 @@
 // 실패율 2019 Recruitment
 
 // https://programmers.co.kr/learn/courses/30/lessons/42889
-// 해설 :
+// 해설 : https://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/
 // 정리 :
 
 
 import Foundation
+
 /*
-func solution(_ N:Int, _ stages:[Int]) -> [Int] {
+func solution(_ n:Int, _ stages:[Int]) -> [Int] {
     var rates = [Int:Double]()
     
-    for i in 1...N {
+    for i in 1...n {
         let triedStageCount = stages.filter({ i<=$0 }).count
         let failedStageCount = stages.filter({ i==$0 }).count
         
@@ -31,10 +32,8 @@ func solution(_ N:Int, _ stages:[Int]) -> [Int] {
     let result = rates.sorted(by: <).sorted(by: {$0.value > $1.value}).map({$0.key})
     
     return result
-}*/
-
- 
-
+}
+*/
 
 func solution(_ n: Int, _ stages: [Int]) -> [Int] {
     var rates = Array(repeating: 0, count: n + 1)
@@ -55,6 +54,7 @@ func solution(_ n: Int, _ stages: [Int]) -> [Int] {
 
 //let n = 5
 //let stages = [2, 1, 2, 6, 2, 4, 3, 3]
+
 let n = 4
 let stages = [4,4,4,4]
 

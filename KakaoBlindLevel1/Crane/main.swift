@@ -8,10 +8,7 @@
 // 크레인 인형뽑기 게임 2019 겨울 인턴쉽
 
 // https://programmers.co.kr/learn/courses/30/lessons/64061
-// 해설 :
-// 정리 :
-
-// 내용을 추가했음
+// 
 
 import Foundation
 
@@ -19,12 +16,11 @@ func solution(_ board:[[Int]], _ moves:[Int]) -> Int {
     var varB = board
     var stack = [Int]()
     var result = 0
-    
+
     for i in moves {
         let check = pick(&varB, i)
-        if check > 0 && stack.isEmpty {
-            stack.append(check)
-        } else {
+        
+        if check != -1 {
             if check == stack.last {
                 stack.popLast()
                 result += 1
@@ -33,7 +29,7 @@ func solution(_ board:[[Int]], _ moves:[Int]) -> Int {
             }
         }
     }
-    
+
     return result*2
 }
 func pick(_ board: inout[[Int]], _ index: Int) -> Int {
@@ -46,6 +42,7 @@ func pick(_ board: inout[[Int]], _ index: Int) -> Int {
     }
     return -1
 }
+
 
 let board = [[0,0,0,0,0],
              [0,0,1,0,3],
