@@ -5,7 +5,7 @@
 //  Created by Yongwoo Marco on 2020/10/15.
 //
 
-// 다트게임 (1차) 2018 2018 KAKAO BLIND RECRUITMENT
+// 다트게임 (1차) 2018 KAKAO BLIND RECRUITMENT
 
 // https://programmers.co.kr/learn/courses/30/lessons/17682
 // 해설 : https://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/
