@@ -8,7 +8,7 @@
 // 크레인 인형뽑기 게임 2019 Internship
 
 // https://programmers.co.kr/learn/courses/30/lessons/64061
-//
+// https://keeplo.tistory.com/195
 
 import Foundation
 
