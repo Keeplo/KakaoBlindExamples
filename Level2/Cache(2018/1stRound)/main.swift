@@ -7,6 +7,9 @@
 
 // 캐시 (1차) 2018 KAKAO BLIND RECRUITMENT
 
+// https://programmers.co.kr/learn/courses/30/lessons/17680
+// https://keeplo.tistory.com/191
+
 import Foundation
 
 func solution(_ cacheSize:Int, _ cities:[String]) -> Int {
