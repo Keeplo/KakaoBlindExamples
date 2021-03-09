@@ -14,13 +14,11 @@ import Foundation
 
 func solution(_ expression:String) -> Int64 {
     let numbers = expression.split(whereSeparator: { !$0.isNumber }).map{ Int($0)! }
-    let operaters = expression.split(whereSeparator: { $0.isNumber }).map{ String($0) }
+    let operaters = expression.split(whereSeparator: { !$0.isNumber }).map{ String($0) }
     var removed = Set(operaters)
     var prioritys = [[String]]()
     
-//    print(numbers)
-//    print(operaters)
-//    print(removed)
+    var results = [Int]()
     
     func permuteWirth(_ a: [String], _ n: Int) {
         if n == 0 {
@@ -37,17 +35,7 @@ func solution(_ expression:String) -> Int64 {
     }
     permuteWirth( Array(removed), removed.count-1)
     
-    for operater in prioritys {
-        for o in operater {
-            for i in 0..<operaters.count {
-                if operaters[i] == o {
-                    
-                } else {
-                    
-                }
-            }
-        }
-    }
+    
     
     
     return 0
