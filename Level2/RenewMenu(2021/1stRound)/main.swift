@@ -13,39 +13,16 @@
 import Foundation
 
 func solution(_ orders:[String], _ course:[Int]) -> [String] {
-    var combo = [String:Int](), result = [String]()
+    var combos = [String:Int](), result = [String]()
     let eachOrders = orders.map({ $0.map({ String($0) }) })
-
-//    print(eachOrders)
-//    print(dishs)
-
     
     func combination(total: [String], shouldSelect: Int, current index: Int, selected: [String]) {
         if shouldSelect == 0 {
-            print(selected)
-            let sel = selected.sorted(by: <).joined()  // 확인 할 코스
-            
-            if !combo.keys.contains( sel ) {
-                let ordered = eachOrders.filter({ o -> Bool in  // 해당 주문 한 경우 손님의 수
-                    if o.count >= selected.count {
-                        
-                        for c in selected {
-                            if !o.contains(c) {
-                                return false
-                            }
-                        }
-                        
-                        return true
-                        
-                    } else {
-                        return false
-                    }
-                }).count
-                
-                if ordered >= 2 {
-                    print("is ")
-                    combo.updateValue(ordered, forKey: sel)
-                }
+            let sorted = selected.sorted(by: <).joined()
+            if combos.keys.contains(sorted) {
+                combos[sorted]! += 1
+            } else {
+                combos.updateValue(1, forKey: sorted)
             }
         } else if index == total.count {
             return
@@ -64,11 +41,13 @@ func solution(_ orders:[String], _ course:[Int]) -> [String] {
             }
         }
         
-        if let max = combo.values.max() {
-            result += combo.filter({ $0.value == max }).keys
+        combos = combos.filter({ $0.value > 1 })
+        
+        if let max = combos.values.max() {
+            result += combos.filter({ $0.value == max }).keys
         }
         
-        combo.removeAll()
+        combos.removeAll()
     }
 
     return result.sorted(by: <)
