@@ -5,13 +5,16 @@
 //  Created by Yongwoo Marco on 2021/03/10.
 //
 
-// 후보키 (2018 KAKAO BLIND RECRUITMENT) Lv 2
+// 후보키 (2019 KAKAO BLIND RECRUITMENT) Lv 2
+
+// https://programmers.co.kr/learn/courses/30/lessons/42890
+//
 
 import Foundation
 
 func solution(_ relation:[[String]]) -> Int {
     var countOfKeys = 0, exceptIndex = [[Int]]()
-    let columm = relation[0].count, row = relation.count
+    let column = relation[0].count, row = relation.count
     
     func combination(total: [Int], shouldSelect: Int, current index: Int, selected: [Int]) {
         if shouldSelect == 0 {
@@ -49,8 +52,8 @@ func solution(_ relation:[[String]]) -> Int {
         }
     }
     
-    for select in 1...columm {
-        combination(total: Array(0..<columm), shouldSelect: select, current: 0, selected: [])
+    for select in 1...column {
+        combination(total: Array(0..<column), shouldSelect: select, current: 0, selected: [])
     }
     
     return countOfKeys
