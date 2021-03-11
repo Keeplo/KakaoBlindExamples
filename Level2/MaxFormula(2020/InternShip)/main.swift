@@ -16,7 +16,7 @@ func solution(_ expression:String) -> Int64 {
     let numbers = expression.split(whereSeparator: { !$0.isNumber }).map{ Int64($0)! }
     let operaters = expression.split(whereSeparator: { $0.isNumber }).map{ String($0) }
     var removed = Set(operaters), prioritys = [[String]](), results: Int64 = 0
-    
+
     func permuteWirth(_ a: [String], _ n: Int) {
         if n == 0 {
             prioritys.append(a)
@@ -31,10 +31,10 @@ func solution(_ expression:String) -> Int64 {
         }
     }
     permuteWirth( Array(removed), removed.count-1)
-    
+
     for priority in prioritys {
         var cloneNums = numbers, cloneOpers = operaters
-        
+
         for p in priority {
             while cloneOpers.contains(p) {
                 if let index = cloneOpers.firstIndex(of: p) {
@@ -62,7 +62,20 @@ func solution(_ expression:String) -> Int64 {
 }
 
 
-
+//enum Operation: Character {
+//    case multiple = "*"
+//    case plus = "+"
+//    case minus = "-"
+//
+//    func operate(_ n1: Int64, _ n2: Int64) -> Int64 {
+//        switch self {
+//            case .multiple: return n1 * n2
+//            case .plus: return n1 + n2
+//            case .minus: return n1 - n2
+//            default: return -1
+//        }
+//    }
+//}
 
 
 let expression = "100-200*300-500+20"   // 60420
