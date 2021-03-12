@@ -2,13 +2,13 @@
 //  main.swift
 //  Friends4Block(2018/1stRound)
 //
-//  Created by Yongwoo Marco on 2021/03/01.
+//  Created by Yongwoo Marco on 2021/03/12.
 //
 
 // 프렌즈4블록 (2018 KAKAO BLIND RECRUITMENT 1st) Lv 2
 
 // https://programmers.co.kr/learn/courses/30/lessons/60057
-//
+// https://keeplo.tistory.com/206
 
 import Foundation
 
