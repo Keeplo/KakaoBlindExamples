@@ -9,7 +9,7 @@
 
 // https://programmers.co.kr/learn/courses/30/lessons/42889
 // 해설 : https://tech.kakao.com/2018/09/21/kakao-blind-recruitment-for2019-round-1/
-// 정리 : https://keeplo.tistory.com/160?category=947131
+// 정리 : https://keeplo.tistory.com/160
 
 
 import Foundation
