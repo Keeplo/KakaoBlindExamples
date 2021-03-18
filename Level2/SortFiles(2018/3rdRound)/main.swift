@@ -8,48 +8,48 @@
 // 파일명 정렬 (2018 KAKAO BLIND RECRUITMENT 3rd) Lv 2
 
 // https://programmers.co.kr/learn/courses/30/lessons/17686
-//
+// https://keeplo.tistory.com/207
 
 import Foundation
 
 func solution(_ files:[String]) -> [String] {
     // Tokens parsing
     let tokens = files.map({ s -> (String, [String]) in
-        var first = [Character](), second = [Character]()
+        var head = [Character](), number = [Character]()
         
         for c in s {
             let cha = Character(extendedGraphemeClusterLiteral: c)
             
-            if first.isEmpty {
-                first.append(cha)
+            if head.isEmpty {
+                head.append(cha)
             } else {
-                if !cha.isNumber, second.isEmpty {
-                    first.append(cha)
-                } else if cha.isNumber, !first.isEmpty {
-                    second.append(cha)
-                } else if !cha.isNumber, !first.isEmpty, !second.isEmpty {
+                if !cha.isNumber, number.isEmpty {
+                    head.append(cha)
+                } else if cha.isNumber, !head.isEmpty {
+                    number.append(cha)
+                } else if !cha.isNumber, !head.isEmpty, !number.isEmpty {
                     break
                 }
             }
         }
         
-        return (s, [first.map({String($0)}).joined(), second.map({String($0)}).joined()])
+        return (s, [head.map({String($0)}).joined(), number.map({String($0)}).joined()])
     })
         
     print(tokens)
     
-    let sorted = tokens.sorted(by: { (f, l) -> Bool in
-           let fArr = f.1
-           let lArr = l.1
+    let sorted = tokens.sorted(by: { (a, b) -> Bool in
+           let aArr = a.1
+           let bArr = b.1
    
-           for (fStr, lStr) in zip(fArr, lArr) {
-               if fStr.lowercased() != lStr.lowercased() {
-                   if let fi = Int(fStr) {
-                       if fi != Int(lStr)! {
-                           return fi < Int(lStr)!
+           for (aStr, bStr) in zip(aArr, bArr) {
+               if aStr.lowercased() != bStr.lowercased() {
+                   if let fi = Int(aStr) {
+                       if fi != Int(bStr)! {
+                           return fi < Int(bStr)!
                        }
                    } else {
-                       return fStr.lowercased() < lStr.lowercased()
+                       return aStr.lowercased() < bStr.lowercased()
                    }
                }
            }
@@ -72,16 +72,13 @@ print(solution(files))
 //print(a < b)
 
 
-//let nums = [3, 2, 1, 5, 4]
-//
-//let sorted = nums.sorted(by: {(f, l) -> Bool in
-//    print("------")
-//    print(f)
-//    print(l)
-//    print(" f < l \(f < l)")
-//
-//
-//    return f < l
-//})
+let nums = [3, 2, 1, 5, 4]
 
-//print(sorted)
+let sorted = nums.sorted(by: {(s, f) -> Bool in
+    
+    print("first: \(f) / second: \(s) // f < s ? \(f<s)")
+
+    return f < s
+})
+
+print(sorted)
