@@ -13,8 +13,9 @@
 import Foundation
 
 func solution(_ files:[String]) -> [String] {
-    let tokens = files.map{ s -> (String, [String]) in
-        var first = [Character](), second = [Character](), last = [Character]()
+    // Tokens parsing
+    let tokens = files.map({ s -> (String, [String]) in
+        var first = [Character](), second = [Character]()
         
         for c in s {
             let cha = Character(extendedGraphemeClusterLiteral: c)
@@ -22,55 +23,53 @@ func solution(_ files:[String]) -> [String] {
             if first.isEmpty {
                 first.append(cha)
             } else {
-                if cha.isNumber {
+                if !cha.isNumber, second.isEmpty {
+                    first.append(cha)
+                } else if cha.isNumber, !first.isEmpty {
                     second.append(cha)
-                } else if !second.isEmpty, second.last!.isNumber, cha.isLetter {
-                    last.append(cha)
-                } else {
-                    if cha != " " {
-                        first.append(cha)
-                    }
+                } else if !cha.isNumber, !first.isEmpty, !second.isEmpty {
+                    break
                 }
             }
         }
         
-            return (s, [first.map{ String($0) }.joined(), second.map{ String($0) }.joined()])
-    }
-    
-//    print(tokens)
+        return (s, [first.map({String($0)}).joined(), second.map({String($0)}).joined()])
+    })
+        
+    print(tokens)
     
     let sorted = tokens.sorted(by: { (f, l) -> Bool in
-        let fArr = f.1
-        let lArr = l.1
-        
-        for (fStr, lStr) in zip(fArr, lArr) {
-            if fStr.lowercased() != lStr.lowercased() {
-                if let fi = Int(fStr) {
-                    if fi != Int(lStr)! {
-                        return fi < Int(lStr)!
-                    }
-                } else {
-                    return fStr.lowercased() < lStr.lowercased()
-                }
-            }
-        }
-        return false
-    }).map{ $0.0 }
+           let fArr = f.1
+           let lArr = l.1
+   
+           for (fStr, lStr) in zip(fArr, lArr) {
+               if fStr.lowercased() != lStr.lowercased() {
+                   if let fi = Int(fStr) {
+                       if fi != Int(lStr)! {
+                           return fi < Int(lStr)!
+                       }
+                   } else {
+                       return fStr.lowercased() < lStr.lowercased()
+                   }
+               }
+           }
+           return false
+       }).map{ $0.0 }
         
     return sorted
 }
 
-let files = ["img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG"]
+//let files = ["img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG"]
 // ["img1.png", "IMG01.GIF", "img02.png", "img2.JPG", "img10.png", "img12.png"]
-//let files = ["F-5 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat"]
+let files = ["F-5 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat"]
 // ["A-10 Thunderbolt II", "B-50 Superfortress", "F-5 Freedom Fighter", "F-14 Tomcat"]
 
-//print(solution(files))
+print(solution(files))
 
-let a = "ab"
-let b = "abc"
-
-print(a < b)
+//let a = "ab"
+//let b = "abc"
+//
+//print(a < b)
 
 
 //let nums = [3, 2, 1, 5, 4]
