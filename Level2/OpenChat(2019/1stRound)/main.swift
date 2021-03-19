@@ -8,7 +8,7 @@
 // 오픈채팅방 (2019 KAKAO BLIND RECRUITMENT 1st) Lv 2
 
 // https://programmers.co.kr/learn/courses/30/lessons/42888
-//
+// https://keeplo.tistory.com/208
 
 import Foundation
 
