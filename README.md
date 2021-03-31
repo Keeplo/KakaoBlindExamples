@@ -9,6 +9,7 @@
 #### 2019
   * 1차 ( [후보키](https://keeplo.tistory.com/202) Lv 2 )
 #### 2020
+ * 1차 ( [괄호 변환](https://keeplo.tistory.com/213) Lv 2 )
 
 #### 2021
   * 1차 ( [신규 아이디 추천](https://keeplo.tistory.com/187) Lv 1 / [메뉴 리뉴얼](https://keeplo.tistory.com/201) Lv 2 )
