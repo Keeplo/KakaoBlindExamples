@@ -5,91 +5,57 @@
 //  Created by Yongwoo Marco on 2021/03/30.
 //
 
+// 괄호 변환
+
+// https://programmers.co.kr/learn/courses/30/lessons/60058
+// https://keeplo.tistory.com/213
+
 import Foundation
 
 func solution(_ p:String) -> String {
     
-    func changeStr(_ u: String) -> String {
-        var changed = [String]()
-        
-        for i in 0..<u.count {
-            let s = String( Array(w)[i] )
-            
-            if let last = chkStack.0.last, String(last) == "(", s == ")" {
-                chkStack.0.removeLast()
-                chkStack.1 -= 1
-            } else {
-                if s == "(" {
-                    chkStack.1 += 1
-                } else {
-                    chkStack.2 += 1
-                }
-                
-                chkStack.0.append(s)
-            }
-        
-        if u == "" {
-            return ""
-        } else if u.count == 2 {
-            return "()"
-        }
-        
-        var removedU = u
-        removedU.removeFirst()
-        removedU.removeLast()
-        
-        for i in 0..<removedU.count {
-            let s = String(Array(removedU)[i])
-            
-            if s == ")" {
-                changed.append("(")
-            } else {
-                changed.append(")")
-            }
-            
-        }
-        
-        print(" changeStr : (\(changed.joined()))")
-        
-        return changeStr(changed.joined())
-    }
-    func devideStr(_ w: String) -> String {
-        var chkStack = ([String](), 0, 0), u = [String]()
-        
-        if w == "" {
-            return ""
-        }
-        
-        for i in 0..<w.count {
-            let s = String( Array(w)[i] )
-            
-            if let last = chkStack.0.last, String(last) == "(", s == ")" {
-                chkStack.0.removeLast()
-                chkStack.1 -= 1
-            } else {
-                if s == "(" {
-                    chkStack.1 += 1
-                } else {
-                    chkStack.2 += 1
-                }
-                
-                chkStack.0.append(s)
-            }
-            
-            u.append(s)
-            
-            if !chkStack.0.isEmpty, chkStack.1 == chkStack.2 {
-            
-                print(" ( : \(chkStack.1) / ) : \(chkStack.2)  u : \(u.joined()) v: \(String( Array(w)[i+1..<w.count])) ")
-                
-                return changeStr( u.joined() ) + devideStr( String( Array(w)[i+1..<w.count]) )
-            }
-        }
-        
-        return u.joined()
+    func changeDirect(_ u: String) -> String {
+        return u.map({ $0 == "(" ? ")" : "("}).joined()
     }
     
-    return devideStr(p)
+    func againFromFirst(_ w: String) -> String {
+        var chkPair = ["(": 0, ")": 0], chkStack = [String](), u = "", v = ""
+        
+        for i in 0..<w.count {
+            let s = String(Array(w)[i])
+            
+            if s == "(" {
+                chkPair["("]! += 1
+                chkStack.append(s)
+            } else {
+                if let last = chkStack.last, last == "(" {
+                    chkStack.removeLast()
+                } else {
+                    chkStack.append(s)
+                }
+                chkPair[")"]! += 1
+            }
+            
+            if chkPair["("] != 0, chkPair["("] == chkPair[")"] { // "균형잡힌 괄호 문자열"
+                u = Array(w)[0...i].map({ String($0) }).joined()
+                if i+1 <= w.count { // i가 마지막 문자보다 뒤에 있는 경우
+                    v = Array(w)[i+1..<w.count].map({ String($0) }).joined()
+                }
+                
+                if chkStack.isEmpty {
+                    return u + againFromFirst(v)
+                } else {
+                    u.removeFirst()
+                    u.removeLast()
+                    
+                    return "(" + againFromFirst(v) + ")" + changeDirect(u)
+                }
+            }
+        }
+        return ""
+    }
+        
+    return againFromFirst(p)
 }
 
 //let p = "(()())()"      // "(()())()"
