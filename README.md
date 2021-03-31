@@ -1,9 +1,10 @@
 # OfficialBlindTests
 
+// 블로그 풀이정리 리스트
+
 ### KAKAO Blind Recruiment
 #### 2018
   * 1차 ( [다트게임](https://keeplo.tistory.com/156) Lv 1 / [비밀지도](https://keeplo.tistory.com/159) Lv 1  / [실패율](https://keeplo.tistory.com/160) Lv 1 / [프렌즈4블록](https://keeplo.tistory.com/206) Lv 2 / [캐시](https://keeplo.tistory.com/191) Lv 2 )
-  * 2차 (  )
   * 3차 ( [파일명 정렬](https://keeplo.tistory.com/207) Lv 2 )
 
 #### 2019
